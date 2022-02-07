@@ -1,0 +1,8 @@
+{
+  "name": "react-native-new-template",
+  "version": "0.0.1",
+  "description": "Cultum React Native Template",
+  "repository": "git@github.com:eugen2991/rn-starter-kit.git",
+  "author": "Cultum",
+  "license": "MIT"
+}
