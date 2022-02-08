@@ -1,12 +1,12 @@
 // libs
 import styled, { css } from 'styled-components/native'
 // types
-import { Margin } from '../../../types/css'
-import { StyledCss } from '../../../types/helpers'
+import { Margin } from '@md-shared/types/css'
+import { StyledCss } from '@md-shared/types/helpers'
 import { ButtonPresets, buttonPresets } from './presets'
 // utils
 import { isNumber } from 'lodash'
-import { getMarginStyle } from '../../../helpers/styled'
+import { getMarginStyle } from '@md-shared/helpers/styled'
 
 export interface WrapperStyle {
   pt?: number

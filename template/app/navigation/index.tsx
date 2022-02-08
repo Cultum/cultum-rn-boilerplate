@@ -7,11 +7,11 @@ import { useSelector } from 'react-redux'
 // constants
 import { ROUTES, RootParamList } from './constants'
 // components
-import { BottomTabMenu } from './bottom-tab-menu'
+import { BottomTabMenu } from '@md-navigation/bottom-tab-menu'
 // screens
 import { LogInScreen, SignUpScreen, UserDetailsScreen } from '@md-screens'
 // types
-import { RootStore } from '../store/modules'
+import { RootStore } from '@md-store/modules'
 
 const Stack = createNativeStackNavigator<RootParamList>()
 

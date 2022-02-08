@@ -1,7 +1,7 @@
 // types
-import { AuthVariables, SignUpResponse } from '../../../../shared/services/api/controllers'
+import { AuthVariables, SignUpResponse } from '@md-shared/services/api/controllers'
 // helpers
-import { createAction, ThunkAction } from '../../../helpers'
+import { createAction, ThunkAction } from '@md-store/helpers'
 import {
   ClientError,
   clientError,
@@ -9,7 +9,7 @@ import {
   ClientSuccess,
   clientSuccess,
   getRequestError,
-} from '../../../../shared/services/api'
+} from '@md-shared/services/api'
 
 /* ------------- Types ------------- */
 
@@ -53,49 +53,49 @@ export const performAPISignUp =
     typeof SET_SIGN_UP_LOADING | typeof SET_SIGN_UP_ERROR | typeof SET_SIGN_UP_SUCCESS,
     Promise<ClientSuccess<SignUpResponse> | ClientError<RequestError>>
   > =>
-    async (dispatch, getState, createApi) => {
-      const api = createApi()
+  async (dispatch, getState, createApi) => {
+    const api = createApi()
 
-      try {
-        dispatch(setSignUpLoadingAction(true))
+    try {
+      dispatch(setSignUpLoadingAction(true))
 
-        const { data } = await api.signUp(variables)
+      const { data } = await api.signUp(variables)
 
-        dispatch(setSignUpSuccessAction(data))
+      dispatch(setSignUpSuccessAction(data))
 
-        return clientSuccess(data)
-      } catch (error) {
-        const errorMap = getRequestError(error)
+      return clientSuccess(data)
+    } catch (error) {
+      const errorMap = getRequestError(error)
 
-        dispatch(setSignUpErrorAction(errorMap))
+      dispatch(setSignUpErrorAction(errorMap))
 
-        return clientError(errorMap)
-      } finally {
-        dispatch(setSignUpLoadingAction(false))
-      }
+      return clientError(errorMap)
+    } finally {
+      dispatch(setSignUpLoadingAction(false))
     }
+  }
 
 /* ------------- Hookup Reducers To Types ------------- */
 
 export function reducer(state = INITIAL_STATE, action: Actions): InitialState {
   switch (action.type) {
-  case SET_SIGN_UP_LOADING:
-    return {
-      ...state,
-      loading: action.payload,
-    }
-  case SET_SIGN_UP_ERROR:
-    return {
-      ...state,
-      error: action.payload,
-    }
-  case SET_SIGN_UP_SUCCESS:
-    return {
-      ...state,
-      error: null,
-      data: action.payload,
-    }
-  default:
-    return state
+    case SET_SIGN_UP_LOADING:
+      return {
+        ...state,
+        loading: action.payload,
+      }
+    case SET_SIGN_UP_ERROR:
+      return {
+        ...state,
+        error: action.payload,
+      }
+    case SET_SIGN_UP_SUCCESS:
+      return {
+        ...state,
+        error: null,
+        data: action.payload,
+      }
+    default:
+      return state
   }
 }

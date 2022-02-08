@@ -1,5 +1,5 @@
 import { Store } from 'redux'
-import { persistStore } from 'template/app/store/redux-persist'
+import { persistStore } from 'redux-persist'
 // local
 import AsyncStorage from '@react-native-community/async-storage'
 import ReduxPersist from './redux-persist'

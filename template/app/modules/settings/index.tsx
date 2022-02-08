@@ -6,16 +6,16 @@ import { yupResolver } from '@hookform/resolvers/yup'
 // hooks
 import { useForm } from 'react-hook-form'
 import { useDispatch } from 'react-redux'
-import { useCurrentUser, useToast } from '../../shared/hooks'
+import { useCurrentUser, useToast } from '@md-shared/hooks'
 // components
 import { View } from 'react-native'
-import { Button, Text } from '../../shared/components/ui'
-import { FormTextField, FromSelect } from '../../shared/components'
+import { Button, Text } from '@md-shared/components/ui'
+import { FormInput, FromSelect } from '@md-shared/components'
 // store
-import { updateProfileAction } from '../../store/modules/profile'
+import { updateProfileAction } from '@md-store/modules/profile'
 // utils
 import { omit } from 'lodash'
-import { delay } from '../../shared/utils/delay'
+import { delay } from '@md-shared/utils/delay'
 
 // styled
 const Header = styled.View`
@@ -39,7 +39,9 @@ const JOBS = [
 
 // types
 interface FormInputs {
+  // eslint-disable-next-line camelcase
   first_name: string
+  // eslint-disable-next-line camelcase
   last_name: string
   email: string
   job: string
@@ -49,7 +51,7 @@ interface FormInputs {
 const schema = yup.object().shape({
   first_name: yup.string().required('Required'),
   last_name: yup.string().required('Required'),
-  email: yup.string().required('Required').nullable().email("E-mail isn't valid"),
+  email: yup.string().required('Required').nullable().email('E-mail isn\'t valid'),
   job: yup.string().required('Required'),
 })
 
@@ -84,13 +86,13 @@ const Settings = () => {
     <View>
       <Header>
         <Text textStyle={TEXT_STYLES} preset={'header'} overrides={TEXT_OVERRIDES}>
-          User Setting
+          Settings
         </Text>
       </Header>
 
-      <FormTextField label={'First Name'} name={'first_name'} control={control} />
-      <FormTextField label={'Last Name'} name={'last_name'} control={control} />
-      <FormTextField label={'Email'} name={'email'} control={control} />
+      <FormInput label={'First Name'} name={'first_name'} control={control} />
+      <FormInput label={'Last Name'} name={'last_name'} control={control} />
+      <FormInput label={'Email'} name={'email'} control={control} />
       <FromSelect label={'Job'} name={'job'} control={control} options={JOBS} placeholder={DEFAULT_PLACEHOLDER} />
       <Button text={'save'} onPress={handleSubmit(onFormSubmit)} isLoading={loading} />
     </View>

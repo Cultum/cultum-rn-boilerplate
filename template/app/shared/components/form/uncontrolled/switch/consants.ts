@@ -1,5 +1,5 @@
 // dimensions
-import { color } from '../../../../theme'
+import { color } from '@md-shared/theme'
 import { ViewStyle } from 'react-native'
 
 const THUMB_SIZE = 30

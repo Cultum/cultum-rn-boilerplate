@@ -2,7 +2,7 @@
 import styled, { css } from 'styled-components/native'
 import { Animated } from 'react-native'
 // types
-import { NotificationType } from '../index'
+import { NotificationType } from '@md-shared/components/ui'
 
 export const InnerWrapper = styled(Animated.View)<{ type: NotificationType }>`
   border-radius: 13px;

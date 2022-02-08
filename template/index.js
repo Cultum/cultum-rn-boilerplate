@@ -1,4 +1,4 @@
-import App from './app'
+import App from './app/index'
 import { AppRegistry } from 'react-native'
 
 const APP_NAME = 'CultumRNStarterKit'

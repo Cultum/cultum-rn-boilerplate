@@ -1,6 +1,6 @@
 import { css } from 'styled-components/native'
-import { StyledCss } from '../types/helpers'
-import { Margin, Padding } from '../types/css'
+import { StyledCss } from '@md-shared/types/helpers'
+import { Margin, Padding } from '@md-shared/types/css'
 
 export const getMarginStyle = <P extends string>(key: P): StyledCss => css<{
   [k in P]?: Margin

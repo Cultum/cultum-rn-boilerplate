@@ -1,20 +1,15 @@
-import * as React from "react"
+import * as React from 'react'
 // types
-import { RootStore } from "../../../store/modules"
+import { RootStore } from '@md-store/modules'
 // hooks
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch, useSelector } from 'react-redux'
 // store
-import {
-  OpenToastParams,
-  resetToastAction,
-  setOpenToastAction,
-  setHideToastAction,
-} from "../../../store/modules/ui/toast"
+import { OpenToastParams, resetToastAction, setOpenToastAction, setHideToastAction } from '@md-store/modules/ui/toast'
 
 const useToast = () => {
   const dispatch = useDispatch()
 
-  const toastData = useSelector<RootStore, RootStore["ui"]["toast"]>((state) => state.ui.toast)
+  const toastData = useSelector<RootStore, RootStore['ui']['toast']>((state) => state.ui.toast)
 
   const openToast = React.useCallback(
     (params: OpenToastParams) => {

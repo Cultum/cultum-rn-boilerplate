@@ -1,9 +1,9 @@
 // constants
-import * as modalTypes from '../../../../shared/constants/modal'
+import * as modalTypes from '@md-shared/constants/modal'
 // types
-import { ModalType } from '../../../../shared/hooks'
+import { ModalType } from '@md-shared/hooks'
 // helpers
-import { createAction } from '../../../helpers'
+import { createAction } from '@md-store/helpers'
 // utils
 import { keys } from 'lodash'
 

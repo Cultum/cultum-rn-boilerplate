@@ -17,7 +17,7 @@
     "lib": ["esnext"],
     "useUnknownInCatchVariables": false,
     "skipLibCheck": true,
-    "baseUrl": "..",
+    "baseUrl": ".",
     "paths": {
       "@md-shared": ["./app/shared"],
       "@md-shared/*": ["./app/shared/*"],
@@ -40,7 +40,7 @@
   ],
   "include": [
     "index.js",
-    "template/app",
-    "template/global.g.ts"
+    "app",
+    "global.g.ts"
   ]
 }

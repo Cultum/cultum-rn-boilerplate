@@ -2,12 +2,12 @@ import * as React from 'react'
 // libs
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 // theme
-import { color, styles } from '../../../shared/theme'
+import { color, styles } from '@md-shared/theme'
 // components
-import { Screen } from '../../../shared/components'
-import { TabMenu } from '../../../shared/components/ui'
+import { Screen } from '@md-shared/components'
+import { TabMenu } from '@md-shared/components/ui'
 // constants
-import { ROUTES, UserParamList, UsersParamList } from '../../constants'
+import { ROUTES, UserParamList, UsersParamList } from '@md-navigation/constants'
 // screens
 import { UsersScreen, UserScreen } from '@md-screens'
 

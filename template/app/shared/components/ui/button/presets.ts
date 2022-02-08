@@ -1,7 +1,7 @@
 // libs
 import { css } from 'styled-components'
 // types
-import { StyledCss } from '../../../types/helpers'
+import { StyledCss } from '@md-shared/types/helpers'
 
 export const buttonPresets = {
   default: css<{ disabled?: boolean }>`

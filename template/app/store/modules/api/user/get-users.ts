@@ -1,7 +1,7 @@
 // types
-import { GetUsersResponse, GetUsersParams } from '../../../../shared/services/api/controllers'
+import { GetUsersResponse, GetUsersParams } from '@md-shared/services/api/controllers'
 // helpers
-import { createAction, ThunkAction } from '../../../helpers'
+import { createAction, ThunkAction } from '@md-store/helpers'
 import {
   ClientError,
   clientError,
@@ -9,9 +9,9 @@ import {
   ClientSuccess,
   clientSuccess,
   getRequestError,
-} from '../../../../shared/services/api'
+} from '@md-shared/services/api'
 // utils
-import { storageManager } from '../../../../shared/utils/storage'
+import { storageManager } from '@md-shared/utils/storage'
 
 /* ------------- Types ------------- */
 

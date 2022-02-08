@@ -2,7 +2,7 @@ import React from 'react'
 // libs
 import styled from 'styled-components/native'
 // components
-import { Text } from '../../../../../shared/components'
+import { Text } from '@md-shared/components'
 import { TouchableOpacity } from 'react-native'
 
 // styled

@@ -2,9 +2,9 @@ import * as React from 'react'
 // libs
 import { TouchableOpacity, View, ViewStyle, StyleProp } from 'react-native'
 // components
-import { Text } from '../../../index'
+import { Text } from '@md-shared/components'
 // constants
-import { FILL, LABEL, OUTLINE, ROOT } from './constants'
+import { FILL, LABEL, OUTLINE, ROOT } from '@md-shared/components/form/uncontrolled/check-box/constants'
 
 export interface CheckboxProps {
   text?: string

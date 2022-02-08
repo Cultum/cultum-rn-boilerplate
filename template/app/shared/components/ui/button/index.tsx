@@ -1,12 +1,12 @@
 import React from 'react'
 // components
-import { Text, TextProps, Loader } from '../../index'
+import { Text, TextProps, Loader } from '@md-shared/components'
 // views
 import { InnerWrapper, LoaderWrapper, Wrapper, ButtonStyle } from './views'
 // presets
 import { textPresets, ButtonPresets } from './presets'
 // types
-import { StyledCss } from '../../../types/helpers'
+import { StyledCss } from '@md-shared/types/helpers'
 import { TouchableOpacityProps } from 'react-native'
 
 interface Props extends TouchableOpacityProps {

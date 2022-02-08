@@ -1,9 +1,9 @@
 import * as React from 'react'
 // components
-import { Screen } from '../../shared/components'
-import { Settings } from '../../modules/settings'
+import { Screen } from '@md-shared/components'
+import { Settings } from '@md-modules/settings'
 // theme
-import { styles } from '../../shared/theme'
+import { styles } from '@md-shared/theme'
 
 const SettingsScreen = () => {
   return (

@@ -1,11 +1,11 @@
 // libs
 import styled from 'styled-components/native'
 // themes
-import { palette } from '../../../theme/palette'
+import { palette } from '@md-shared/theme/palette'
 // types
-import { StyledCss } from '../../../types/helpers'
+import { StyledCss } from '@md-shared/types/helpers'
 import { TextPresets, presets } from './presets'
-import { TextAlign, Padding, Margin } from '../../../types/css'
+import { TextAlign, Padding, Margin } from '@md-shared/types/css'
 
 export interface TextStyle {
   fs?: number

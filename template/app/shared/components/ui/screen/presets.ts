@@ -1,7 +1,7 @@
 // libs
 import { ViewStyle } from 'react-native'
 // themes
-import { color } from '../../../theme'
+import { color } from '@md-shared/theme'
 // utils
 import { isNil } from 'lodash'
 

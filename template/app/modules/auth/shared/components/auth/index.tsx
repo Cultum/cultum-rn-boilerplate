@@ -6,11 +6,11 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { Keyboard, TouchableWithoutFeedback } from 'react-native'
 // hooks
 import { useForm } from 'react-hook-form'
-import { useToast } from '../../../../../shared/hooks'
+import { useToast } from '@md-shared/hooks'
 import { useDispatch } from 'react-redux'
 // components
-import { AuthRedirect } from '../auth-redirect'
-import { Button, Text, FormTextField } from '../../../../../shared/components'
+import { AuthRedirect } from '@md-modules/auth/shared/components/auth-redirect'
+import { Button, Text, FormInput } from '@md-shared/components'
 // helpers
 import {
   ClientError,
@@ -19,15 +19,15 @@ import {
   isClientError,
   isClientSuccess,
   getRequestErrorMessage,
-} from '../../../../../shared/services/api'
+} from '@md-shared/services/api'
 // store
-import * as API from '../../../../../store/modules/api'
-import { setAuthorizedAction, setUserAction } from '../../../../../store/modules/profile'
+import * as API from '@md-store/modules/api'
+import { setAuthorizedAction, setUserAction } from '@md-store/modules/profile'
 // storage
-import { storageManager } from '../../../../../shared/utils/storage'
+import { storageManager } from '@md-shared/utils/storage'
 // types
-import { ThunkDispatch } from '../../../../../store/helpers'
-import { LogInResponse, SignUpResponse } from '../../../../../shared/services/api/controllers'
+import { ThunkDispatch } from '@md-store/helpers'
+import { LogInResponse, SignUpResponse } from '@md-shared/services/api/controllers'
 
 // styled
 const Wrapper = styled.View`
@@ -37,7 +37,6 @@ const Wrapper = styled.View`
 `
 
 // constants
-const TEXT_STYLES = { mt: 12 }
 const BUTTON_STYLES = { mt: 20 }
 const HEADER_TEXT_STYLES = { align: 'center' as const, mb: 30 }
 
@@ -56,7 +55,7 @@ interface FormInputs {
 
 // validation
 const schema = yup.object().shape({
-  email: yup.string().required('Required').nullable().email("E-mail isn't valid"),
+  email: yup.string().required('Required').nullable().email('E-mail isn\'t valid'),
   password: yup.string().min(6, 'Min length 6 characters').required('Required'),
 })
 
@@ -72,17 +71,16 @@ const Auth: React.FC<Props> = ({ isSignUp = false, isLoading, onFormSubmit, onNa
   const onSubmit = async (data: FormInputs) => {
     Keyboard.dismiss()
 
-    const res = await onFormSubmit(data)
+    const res = await onFormSubmit({ password: data.password, email: 'byron.fields@reqres.in' })
 
     if (isClientSuccess(res)) {
       const { token } = res.data
 
-      if ('id' in res.data) {
-        const userRes = await dispatch(API.user.getUser.performAPIGetUser({ id: res.data.id }))
+      const userId = res.data?.id || '9'
+      const userRes = await dispatch(API.user.getUser.performAPIGetUser({ id: userId }))
 
-        if (isClientSuccess(userRes)) {
-          dispatch(setUserAction(userRes.data.data))
-        }
+      if (isClientSuccess(userRes)) {
+        dispatch(setUserAction(userRes.data.data))
       }
 
       await storageManager.setAuthToken(token)
@@ -104,18 +102,14 @@ const Auth: React.FC<Props> = ({ isSignUp = false, isLoading, onFormSubmit, onNa
         <Text textStyle={HEADER_TEXT_STYLES} preset={'screenHeader'}>
           {isSignUp ? 'Sign Up' : 'Log In'}
         </Text>
-        <FormTextField control={control} label={'email'} name={'email'} />
-        <FormTextField control={control} label={'password'} name={'password'} secureTextEntry />
+        <FormInput control={control} label={'email'} name={'email'} />
+        <FormInput control={control} label={'password'} name={'password'} secureTextEntry />
         <Button
           isLoading={isLoading}
           buttonStyle={BUTTON_STYLES}
           onPress={handleSubmit(onSubmit)}
           text={isSignUp ? 'Sign Up' : 'Log In'}
         />
-
-        <Text preset='secondary' textStyle={TEXT_STYLES}>
-          For success {isSignUp ? 'register' : 'log in'} use: {'\n'}byron.fields@reqres.in - any 6 digits
-        </Text>
 
         <AuthRedirect isSignUp={isSignUp} onNavButtonPress={onNavButtonPress} />
       </Wrapper>

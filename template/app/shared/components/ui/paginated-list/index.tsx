@@ -2,11 +2,11 @@ import * as React from 'react'
 // libs
 import { useIsFocused } from '@react-navigation/native'
 // components
-import { Loader, Text } from '../../index'
+import { Loader, Text } from '@md-shared/components'
 import { FlatList, FlatListProps, RefreshControl } from 'react-native'
 // other
-import { theme } from '../../../theme'
-import { palette } from '../../../theme/palette'
+import { theme } from '@md-shared/theme'
+import { palette } from '@md-shared/theme/palette'
 // views
 import { LoaderWrapper, EmptyPlaceholder } from './views'
 // utils
@@ -33,7 +33,7 @@ const ListLoader = () => (
   </LoaderWrapper>
 )
 
-const PaginatedList = <T extends {}>({
+const PaginatedList = <T extends Record<string, unknown>>({
   data,
   perPage = 6,
   loadData,

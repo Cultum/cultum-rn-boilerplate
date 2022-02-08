@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components/native'
 import { Animated, Easing } from 'react-native'
 // types
-import { Padding } from '../../../types/css'
+import { Padding } from '@md-shared/types/css'
 import { LoaderPresets, presets } from './presets'
 // assets
 import LoaderSvg from './svg/loader'

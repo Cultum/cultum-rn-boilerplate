@@ -2,8 +2,8 @@
 import { Action as ActionWithoutPayload } from 'redux'
 import { ThunkAction as ThunkA, ThunkDispatch as ThunkD } from 'redux-thunk'
 // internal
-import { RootStore } from './modules'
-import { CreateApi } from '../shared/services/api'
+import { RootStore } from '@md-store/modules'
+import { CreateApi } from '@md-shared/services/api'
 
 export type ThunkDispatch = ThunkD<RootStore, CreateApi, ActionWithoutPayload>
 

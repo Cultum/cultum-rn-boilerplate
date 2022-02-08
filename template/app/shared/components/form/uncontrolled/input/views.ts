@@ -1,9 +1,9 @@
 // libs
 import styled from 'styled-components/native'
 // types
-import { Margin } from '../../../../types/css'
+import { Margin } from '@md-shared/types/css'
 // helpers
-import { getMarginStyle } from '../../../../helpers/styled'
+import { getMarginStyle } from '@md-shared/helpers/styled'
 
 export type WrapperStyle = Margin
 

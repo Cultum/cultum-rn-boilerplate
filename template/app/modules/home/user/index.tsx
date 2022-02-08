@@ -1,12 +1,12 @@
 import * as React from 'react'
 // hooks
-import { useCurrentUser, useModal } from '../../../shared/hooks'
+import { useCurrentUser, useModal } from '@md-shared/hooks'
 // components
 import { View } from 'react-native'
 import { ConfirmNavigationModal } from './components/confirm-navigation-modal'
-import { UserCard, NavigationButton } from '../shared/components'
+import { UserCard, NavigationButton } from '@md-modules/home/shared/components'
 // constants
-import { CONFIRM_NAV_MODAL } from '../../../shared/constants/modal'
+import { CONFIRM_NAV_MODAL } from '@md-shared/constants/modal'
 
 const User = () => {
   const user = useCurrentUser()

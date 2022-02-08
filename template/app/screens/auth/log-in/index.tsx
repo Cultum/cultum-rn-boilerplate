@@ -1,9 +1,9 @@
 import * as React from 'react'
 // components
-import { LogIn } from '../../../modules/auth/log-in'
-import { Screen } from '../../../shared/components'
+import { LogIn } from '@md-modules/auth/log-in'
+import { Screen } from '@md-shared/components'
 // theme
-import { styles } from '../../../shared/theme'
+import { styles } from '@md-shared/theme'
 
 const LogInScreen = () => {
   return (

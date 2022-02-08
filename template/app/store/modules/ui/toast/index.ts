@@ -1,9 +1,9 @@
 // libs
 import { GestureResponderEvent } from 'react-native'
 // helpers
-import { createAction } from '../../../helpers'
+import { createAction } from '@md-store/helpers'
 // types
-import { NotificationPresets, NotificationType } from '../../../../shared/components/ui/toast-notification'
+import { NotificationPresets, NotificationType } from '@md-shared/components/ui/toast-notification'
 
 /* ------------- Types ------------- */
 
@@ -17,6 +17,7 @@ export interface OpenToastParams {
   type: NotificationType
   preset: NotificationPresets
   message: string
+
   onPress?(): unknown
 }
 
@@ -53,22 +54,22 @@ export const INITIAL_STATE: InitialState = {
 
 export function reducer(state = INITIAL_STATE, action: Actions): InitialState {
   switch (action.type) {
-  case OPEN_TOAST:
-    return state.open
-      ? state
-      : {
+    case OPEN_TOAST:
+      return state.open
+        ? state
+        : {
+          ...state,
+          ...action.payload,
+          open: true,
+        }
+    case HIDE_TOAST:
+      return {
         ...state,
-        ...action.payload,
-        open: true,
+        open: false,
       }
-  case HIDE_TOAST:
-    return {
-      ...state,
-      open: false,
-    }
-  case RESET_TOAST_DATA:
-    return INITIAL_STATE
-  default:
-    return state
+    case RESET_TOAST_DATA:
+      return INITIAL_STATE
+    default:
+      return state
   }
 }

@@ -1,5 +1,5 @@
 // libs
-import { persistReducer } from 'template/app/store/redux-persist'
+import { persistReducer } from 'redux-persist'
 import { AnyAction, Reducer, CombinedState } from 'redux'
 // local
 import { rootReducer } from './modules'

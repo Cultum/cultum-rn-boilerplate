@@ -2,14 +2,14 @@ import React from 'react'
 // libs
 import styled from 'styled-components/native'
 // hooks
-import { useModal } from '../../../../../shared/hooks'
+import { useModal } from '@md-shared/hooks'
 import { useNavigation } from '@react-navigation/native'
 // components
-import { Button, Modal, Text } from '../../../../../shared/components'
+import { Button, Modal, Text } from '@md-shared/components'
 // constants
-import { CONFIRM_NAV_MODAL } from '../../../../../shared/constants/modal'
+import { CONFIRM_NAV_MODAL } from '@md-shared/constants/modal'
 // types
-import { PrimaryParamList, ROUTES } from '../../../../../navigation/constants'
+import { PrimaryParamList, ROUTES } from '@md-navigation/constants'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 
 // styled

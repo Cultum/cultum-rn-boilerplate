@@ -12,7 +12,7 @@ import {
   ON_POSITION,
   BORDER_ON_COLOR,
   BORDER_OFF_COLOR,
-} from './consants'
+} from '@md-shared/components/form/uncontrolled/switch/consants'
 
 export interface SwitchProps {
   value: boolean

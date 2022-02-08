@@ -1,4 +1,4 @@
-import { color } from '../../../theme'
+import { color } from '@md-shared/theme'
 
 export const presets = {
   default: {

@@ -1,7 +1,7 @@
 // types
-import { AuthVariables, LogInResponse } from '../../../../shared/services/api/controllers'
+import { AuthVariables, LogInResponse } from '@md-shared/services/api/controllers'
 // helpers
-import { createAction, ThunkAction } from '../../../helpers'
+import { createAction, ThunkAction } from '@md-store/helpers'
 import {
   ClientError,
   clientError,
@@ -9,7 +9,7 @@ import {
   ClientSuccess,
   clientSuccess,
   getRequestError,
-} from '../../../../shared/services/api'
+} from '@md-shared/services/api'
 
 /* ------------- Types ------------- */
 
@@ -53,49 +53,49 @@ export const performAPILogIn =
     typeof SET_LOG_IN_LOADING | typeof SET_LOG_IN_ERROR | typeof SET_LOG_IN_SUCCESS,
     Promise<ClientSuccess<LogInResponse> | ClientError<RequestError>>
   > =>
-    async (dispatch, getState, createApi) => {
-      const api = createApi()
+  async (dispatch, getState, createApi) => {
+    const api = createApi()
 
-      try {
-        dispatch(setLogInLoadingAction(true))
+    try {
+      dispatch(setLogInLoadingAction(true))
 
-        const { data } = await api.logIn(variables)
+      const { data } = await api.logIn(variables)
 
-        dispatch(setLogInSuccessAction(data))
+      dispatch(setLogInSuccessAction(data))
 
-        return clientSuccess(data)
-      } catch (error) {
-        const errorMap = getRequestError(error)
+      return clientSuccess(data)
+    } catch (error) {
+      const errorMap = getRequestError(error)
 
-        dispatch(setLogInErrorAction(errorMap))
+      dispatch(setLogInErrorAction(errorMap))
 
-        return clientError(errorMap)
-      } finally {
-        dispatch(setLogInLoadingAction(false))
-      }
+      return clientError(errorMap)
+    } finally {
+      dispatch(setLogInLoadingAction(false))
     }
+  }
 
 /* ------------- Hookup Reducers To Types ------------- */
 
 export function reducer(state = INITIAL_STATE, action: Actions): InitialState {
   switch (action.type) {
-  case SET_LOG_IN_LOADING:
-    return {
-      ...state,
-      loading: action.payload,
-    }
-  case SET_LOG_IN_ERROR:
-    return {
-      ...state,
-      error: action.payload,
-    }
-  case SET_LOG_IN_SUCCESS:
-    return {
-      ...state,
-      error: null,
-      data: action.payload,
-    }
-  default:
-    return state
+    case SET_LOG_IN_LOADING:
+      return {
+        ...state,
+        loading: action.payload,
+      }
+    case SET_LOG_IN_ERROR:
+      return {
+        ...state,
+        error: action.payload,
+      }
+    case SET_LOG_IN_SUCCESS:
+      return {
+        ...state,
+        error: null,
+        data: action.payload,
+      }
+    default:
+      return state
   }
 }

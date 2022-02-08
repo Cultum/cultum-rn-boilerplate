@@ -1,16 +1,16 @@
 import React from 'react'
 import { Image as RNImage, Animated } from 'react-native'
 // components
-import { Loader } from '../../index'
+import { Loader } from '@md-shared/components'
 // views
 import { FastImageExt, LoaderWrapper, ImageWrapper } from './views'
 // types
-import { StyledCss } from '../../../types/helpers'
-import { BorderRadius } from '../../../utils/borderRadiusHandler'
+import { StyledCss } from '@md-shared/types/helpers'
+import { BorderRadius } from '@md-shared/utils/borderRadiusHandler'
 import { FastImageProps } from 'react-native-fast-image'
-import { LoaderPresets } from '../loader/presets'
+import { LoaderPresets } from '@md-shared/components/ui/loader/presets'
 
-const photo = require('../../../../../assets/images/png/photo.png')
+const photo = require('@md-assets/images/png/photo.png')
 
 export interface ImageProps extends FastImageProps {
   width?: number

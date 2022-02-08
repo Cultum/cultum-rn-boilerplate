@@ -11,9 +11,9 @@ import {
 // hooks
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 // components
-import { Text } from '../../index'
+import { Text } from '@md-shared/components'
 // assets
-import CloseSvg from '../../../../../assets/images/svg/close'
+import CloseSvg from '@md-assets/images/svg/close'
 // views
 import { Adornment, Header, Wrapper, IWrapper, BWrapper, ModalSize, MODAL_SIZE } from './views'
 

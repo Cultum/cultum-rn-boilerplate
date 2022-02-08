@@ -2,7 +2,7 @@ import React from 'react'
 // libs
 import styled from 'styled-components/native'
 // components
-import { Button } from '../../../../../shared/components'
+import { Button } from '@md-shared/components'
 
 // styled
 const Wrapper = styled.View`

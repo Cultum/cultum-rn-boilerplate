@@ -1,4 +1,4 @@
-# cultum-rn-starter-kit
+# Cultum RN Starter Kit
 
 This boilerplate currently includes.
 

@@ -2,18 +2,16 @@ import React from 'react'
 // libs
 import FastImage from 'react-native-fast-image'
 // constants
-import { avatarPresets } from './presets'
+import { avatarPresets, AvatarPresets } from './presets'
 // views
 import { Wrapper } from './views'
-
-import { AvatarPresets } from './presets'
 
 export interface AvatarProps {
   source?: string
   preset?: AvatarPresets
 }
 
-const defaultAvatar = require('../../../../../assets/images/png/default-avatar.png')
+const defaultAvatar = require('@md-assets/images/png/default-avatar.png')
 
 const Avatar: React.FC<AvatarProps> = ({ preset = 'medium', source }) => {
   const avatarStyle = {

@@ -1,9 +1,9 @@
 import * as React from 'react'
 // components
-import { User } from '../../../modules/home'
-import { Screen } from '../../../shared/components'
+import { User } from '@md-modules/home'
+import { Screen } from '@md-shared/components'
 // theme
-import { styles } from '../../../shared/theme'
+import { styles } from '@md-shared/theme'
 
 const UserScreen = () => {
   return (

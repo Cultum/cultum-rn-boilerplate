@@ -1,15 +1,15 @@
 import * as React from 'react'
 // types
-import * as modalTypes from '../../constants/modal'
-import { RootStore } from '../../../store/modules'
+import * as modalTypes from '@md-shared/constants/modal'
+import { RootStore } from '@md-store/modules'
 // hooks
 import { useDispatch, useSelector } from 'react-redux'
 // store
-import { setCloseModalAction, setOpenModalAction } from '../../../store/modules/ui/modal'
+import { setCloseModalAction, setOpenModalAction } from '@md-store/modules/ui/modal'
 
 export type ModalType = keyof typeof modalTypes
 
-interface ReturnType<T = {}> {
+interface ReturnType<T = Record<string, unknown>> {
   openModal: (modalData?: T) => void
   modalData: { open: boolean; data: T }
   closeModal: () => void

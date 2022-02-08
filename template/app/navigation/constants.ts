@@ -1,5 +1,5 @@
 // types
-import { User } from '../shared/types/entities'
+import { User } from '@md-shared/types/entities'
 
 export const ROUTES = {
   root: {

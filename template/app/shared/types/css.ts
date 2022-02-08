@@ -1,4 +1,4 @@
-export type TextAlign = "center" | "justify" | "left" | "right" | "start" | "end"
+export type TextAlign = 'center' | 'justify' | 'left' | 'right' | 'start' | 'end'
 
 export interface Margin {
   ml?: number

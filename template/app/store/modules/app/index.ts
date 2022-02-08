@@ -1,4 +1,4 @@
-import { createAction } from '../../helpers'
+import { createAction } from '@md-store/helpers'
 
 /* ------------- Types ------------- */
 
@@ -25,12 +25,12 @@ export const INITIAL_STATE: InitialState = {
 
 export function reducer(state = INITIAL_STATE, action: Actions): InitialState {
   switch (action.type) {
-  case SET_INITIALIZED:
-    return {
-      ...state,
-      initialized: action.payload,
-    }
-  default:
-    return state
+    case SET_INITIALIZED:
+      return {
+        ...state,
+        initialized: action.payload,
+      }
+    default:
+      return state
   }
 }

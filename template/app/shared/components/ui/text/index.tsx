@@ -2,7 +2,7 @@ import * as React from 'react'
 // views
 import { RNText, TextStyleProps } from './views'
 // types
-import { StyledCss } from '../../../types/helpers'
+import { StyledCss } from '@md-shared/types/helpers'
 import { TextProps as RNTextProps } from 'react-native'
 
 import { TextPresets } from './presets'

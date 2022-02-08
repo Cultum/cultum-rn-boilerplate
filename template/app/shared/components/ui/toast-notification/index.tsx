@@ -2,7 +2,7 @@ import * as React from 'react'
 // libs
 import { Animated, Easing } from 'react-native'
 // hooks
-import { useToast } from '../../../hooks'
+import { useToast } from '@md-shared/hooks'
 // views
 import { Wrapper, InnerWrapper, AnimatedText, TouchableOpacityExt } from './views'
 // constants

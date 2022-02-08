@@ -2,11 +2,11 @@ import * as React from 'react'
 // hooks
 import { useRoute, Route, useNavigation } from '@react-navigation/native'
 // components
-import { Text } from '../../../shared/components'
-import { UserCard, NavigationButton } from '../shared/components'
+import { Text } from '@md-shared/components'
+import { UserCard, NavigationButton } from '@md-modules/home/shared/components'
 // Types
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
-import { PrimaryParamList, RootParamList, ROUTES } from '../../../navigation/constants'
+import { PrimaryParamList, RootParamList, ROUTES } from '@md-navigation/constants'
 
 const TEXT_STYLES = { align: 'center' as const, mb: 30 }
 

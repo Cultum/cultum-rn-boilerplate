@@ -2,14 +2,12 @@ import * as React from 'react'
 // libs
 import Picker, { Item, PickerSelectProps } from 'react-native-picker-select'
 // components
-import { Text } from '../../../index'
-import { ErrorMessage } from '../../error-message'
+import { Text } from '@md-shared/components'
+import { ErrorMessage } from '@md-shared/components/form/error-message'
 // assets
-import DownArrowSvg from '../../../../../../assets/images/svg/down-arrow'
-// types
-import { WrapperStyle } from './views'
+import DownArrowSvg from '@md-assets/images/svg/down-arrow'
 // views
-import { PickerWrapper, Wrapper, labelTextOverrides } from './views'
+import { PickerWrapper, Wrapper, labelTextOverrides, WrapperStyle } from './views'
 // style
 import { style } from './style'
 
@@ -19,7 +17,7 @@ export interface SelectProps extends Omit<PickerSelectProps, 'onValueChange' | '
   errorText?: string
   isInvalid?: boolean
   selectRef?: React.RefObject<Picker>
-  placeholder?: Item | {}
+  placeholder?: Item | Record<string, unknown>
   defaultValue?: string
   wrapperStyle?: WrapperStyle
   onSelectChange?: (value: string) => void
@@ -61,7 +59,6 @@ const Select: React.FC<SelectProps> = ({
       )}
       <PickerWrapper isValid={!isInvalid}>
         <Picker
-          {...rest}
           style={style}
           items={options}
           ref={selectRef}
@@ -70,6 +67,7 @@ const Select: React.FC<SelectProps> = ({
           placeholder={placeholder ?? {}}
           InputAccessoryView={() => null}
           onValueChange={handleOnSelectChange}
+          {...rest}
         />
       </PickerWrapper>
       <ErrorMessage errorText={errorText} />

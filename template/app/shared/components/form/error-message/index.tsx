@@ -1,6 +1,6 @@
 import * as React from 'react'
 // components
-import { Text } from '../../index'
+import { Text } from '@md-shared/components'
 
 const ERROR_TEXT_STYLE = { mt: 3 }
 

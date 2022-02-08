@@ -3,9 +3,9 @@ import styled from 'styled-components/native'
 import FastImage from 'react-native-fast-image'
 import { Animated } from 'react-native'
 // types
-import { StyledCss } from '../../../types/helpers'
+import { StyledCss } from '@md-shared/types/helpers'
 // utils
-import { BorderRadius, handleBorderRadius } from '../../../utils/borderRadiusHandler'
+import { BorderRadius, handleBorderRadius } from '@md-shared/utils/borderRadiusHandler'
 
 interface ImageWrapper {
   width?: number

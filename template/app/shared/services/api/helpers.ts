@@ -30,18 +30,18 @@ export const clientError = <R>(error: R): ClientError<R> => ({
 // ERROR
 export type RequestError =
   | {
-      _tag: 'ResponseError'
-      data: any
-      status: number
-    }
+  _tag: 'ResponseError'
+  data: any
+  status: number
+}
   | {
-      _tag: 'NoResponseError'
-      request: any
-    }
+  _tag: 'NoResponseError'
+  request: any
+}
   | {
-      _tag: 'RequestError'
-      message: string
-    }
+  _tag: 'RequestError'
+  message: string
+}
 
 export const getRequestError = (error: AxiosError): RequestError => {
   if (error.response) {
@@ -68,12 +68,11 @@ export const getRequestError = (error: AxiosError): RequestError => {
 
 export const getRequestErrorMessage = (error: RequestError) => {
   switch (error._tag) {
-  case 'ResponseError':
-    // TODO: check in new API
-    return error.data.error
-  case 'NoResponseError':
-    return JSON.stringify(error.request)
-  case 'RequestError':
-    return error.message
+    case 'ResponseError':
+      return error.data.error
+    case 'NoResponseError':
+      return JSON.stringify(error.request)
+    case 'RequestError':
+      return error.message
   }
 }

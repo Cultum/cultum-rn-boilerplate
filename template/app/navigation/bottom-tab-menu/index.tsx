@@ -3,15 +3,15 @@ import * as React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 // constants
-import { ROUTES, HomeParamList, SettingsParamList } from '../constants'
+import { ROUTES, HomeParamList, SettingsParamList } from '@md-navigation/constants'
 // assets
 import { Home, Settings } from './tab-icons'
 // theme
-import { theme } from '../../shared/theme'
+import { theme } from '@md-shared/theme'
 // components
-import { UsersTabsMenu } from '../tab-menu-navigators/users'
+import { UsersTabsMenu } from '@md-navigation/tab-menu-navigators/users'
 // screens
-import { SettingsScreen } from '../../screens/settings'
+import { SettingsScreen } from '@md-screens/settings'
 
 const SCREEN_OPTIONS = {
   headerShown: false,

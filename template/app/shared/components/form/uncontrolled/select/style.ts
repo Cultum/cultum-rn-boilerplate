@@ -1,4 +1,4 @@
-import { theme } from '../../../../theme'
+import { theme } from '@md-shared/theme'
 import { StyleSheet } from 'react-native'
 
 const selectSharedStyles = {

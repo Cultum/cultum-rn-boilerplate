@@ -1,7 +1,7 @@
 // types
-import { User } from '../../../shared/types/entities'
+import { User } from '@md-shared/types/entities'
 // helpers
-import { createAction } from '../../helpers'
+import { createAction } from '@md-store/helpers'
 
 /* ------------- Types ------------- */
 

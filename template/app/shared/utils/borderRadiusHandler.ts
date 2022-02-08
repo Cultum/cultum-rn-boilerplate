@@ -1,9 +1,9 @@
-import { css } from "styled-components/native"
+import { css } from 'styled-components/native'
 
 export type BorderRadius = number | [number, number, number, number]
 
 export const handleBorderRadius = (borderRadius: BorderRadius = 0) => {
-  return typeof borderRadius === "object"
+  return typeof borderRadius === 'object'
     ? css`
         border-radius: ${borderRadius[0]}px;
         border-top-left-radius: ${borderRadius[0]}px;

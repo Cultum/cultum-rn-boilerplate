@@ -3,7 +3,7 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { createStore, applyMiddleware, compose, StoreEnhancer } from 'redux'
 // local
-import { createAPI } from '../shared/services/api'
+import { createAPI } from '@md-shared/services/api'
 import Rehydration from './rehydration'
 import ReduxPersist from './redux-persist'
 

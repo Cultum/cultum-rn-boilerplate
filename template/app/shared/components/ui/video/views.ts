@@ -1,7 +1,7 @@
 // libs
 import styled from 'styled-components/native'
 // utils
-import { handleBorderRadius, BorderRadius } from '../../../utils/borderRadiusHandler'
+import { handleBorderRadius, BorderRadius } from '@md-shared/utils/borderRadiusHandler'
 
 interface VideoWrapper {
   width?: number

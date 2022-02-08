@@ -3,15 +3,15 @@ import * as React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux'
 // components
-import { Auth } from '../shared/components/auth'
+import { Auth } from '@md-modules/auth/shared/components/auth'
 // store
-import * as API from '../../../store/modules/api'
+import * as API from '@md-store/modules/api'
 // types
-import { RootStore } from '../../../store/modules'
-import { ThunkDispatch } from '../../../store/helpers'
+import { RootStore } from '@md-store/modules'
+import { ThunkDispatch } from '@md-store/helpers'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 // constants
-import { PrimaryParamList, ROUTES } from '../../../navigation/constants'
+import { PrimaryParamList, ROUTES } from '@md-navigation/constants'
 
 interface FormInputs {
   email: string

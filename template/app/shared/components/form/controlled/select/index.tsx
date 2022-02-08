@@ -1,6 +1,6 @@
 import * as React from 'react'
 // components
-import { Select, SelectProps } from '../../../index'
+import { Select, SelectProps } from '@md-shared/components'
 // types
 import { Control, Controller } from 'react-hook-form'
 
@@ -20,12 +20,12 @@ const FromSelect: React.FC<Props> = ({ name, control, defaultValue = '', ...rest
       defaultValue={defaultValue}
       render={({ field: { onChange, value }, fieldState: { error } }) => (
         <Select
-          {...rest}
           isInvalid={!!error}
           defaultValue={value}
           errorText={error?.message}
           wrapperStyle={WRAPPER_STYLE}
           onSelectChange={(value) => onChange(value)}
+          {...rest}
         />
       )}
     />

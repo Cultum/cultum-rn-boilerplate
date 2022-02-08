@@ -3,11 +3,11 @@ import React from 'react'
 import { Image as Img } from 'react-native'
 import RNVideo, { VideoProperties } from 'react-native-video'
 // components
-import { Loader } from '../../index'
+import { Loader } from '@md-shared/components'
 // views
 import { LoaderWrapper, VideoWrapper } from './views'
 // types
-import { BorderRadius } from '../../../utils/borderRadiusHandler'
+import { BorderRadius } from '@md-shared/utils/borderRadiusHandler'
 
 // types
 export interface VideoProps extends VideoProperties {
@@ -19,7 +19,7 @@ export interface VideoProps extends VideoProperties {
 // constants
 const VIDEO_STYLE = { width: '100%', height: '100%' }
 
-const photo = require('../../../../../assets/images/png/photo.png')
+const photo = require('@md-assets/images/png/photo.png')
 
 const Video: React.FC<VideoProps> = ({ width, height, borderRadius, resizeMode = 'contain', ...rest }) => {
   const [isLoading, setLoading] = React.useState<boolean>(true)

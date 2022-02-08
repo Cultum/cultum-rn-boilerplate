@@ -1,5 +1,5 @@
-import { css } from "styled-components"
-import { Padding, Margin } from "../types/css"
+import { css } from 'styled-components'
+import { Padding, Margin } from '@md-shared/types/css'
 
 export const template = {
   absolute: css`

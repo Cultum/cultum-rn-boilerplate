@@ -6,7 +6,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context'
 // presets
 import { KeyboardOffsets, ScreenPresets, isNonScrolling, offsets, presets } from './presets'
 // components
-import { ToastNotification } from '../toast-notification'
+import { ToastNotification } from '@md-shared/components/ui/toast-notification'
 
 const isIos = Platform.OS === 'ios'
 

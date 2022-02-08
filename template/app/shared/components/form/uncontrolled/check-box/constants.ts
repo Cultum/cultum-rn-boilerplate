@@ -1,7 +1,7 @@
 // libs
 import { TextStyle, ViewStyle } from 'react-native'
 // theme
-import { color, spacing } from '../../../../theme'
+import { color, spacing } from '@md-shared/theme'
 
 export const ROOT: ViewStyle = {
   flexDirection: 'row',

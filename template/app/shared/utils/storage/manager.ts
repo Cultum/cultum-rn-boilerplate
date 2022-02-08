@@ -1,7 +1,7 @@
 // utils
 import { saveString, loadString } from './storage'
 // constants
-import { accessTokenKey } from '../../constants/common'
+import { accessTokenKey } from '@md-shared/constants/common'
 
 interface StorageManager {
   setAuthToken: (token: string) => Promise<boolean>

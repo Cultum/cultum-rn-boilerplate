@@ -2,11 +2,11 @@ import React from 'react'
 // libs
 import styled from 'styled-components/native'
 // components
-import { Avatar, Text } from '../../../../../shared/components'
+import { Avatar, Text } from '@md-shared/components'
 import { TouchableWithoutFeedback } from 'react-native'
 
 // types
-import { User } from '../../../../../shared/types/entities'
+import { User } from '@md-shared/types/entities'
 
 // styled
 const Wrapper = styled.View`

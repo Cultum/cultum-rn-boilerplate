@@ -3,17 +3,17 @@ import * as React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { useDispatch, useSelector } from 'react-redux'
 // components
-import { UserCard } from '../shared/components/user-card'
-import { PaginatedList } from '../../../shared/components'
+import { UserCard } from '@md-modules/home/shared/components/user-card'
+import { PaginatedList } from '@md-shared/components'
 // store
-import * as API from '../../../store/modules/api'
+import * as API from '@md-store/modules/api'
 // types
-import { User } from '../../../shared/types/entities'
-import { RootStore } from '../../../store/modules'
-import { ThunkDispatch } from '../../../store/helpers'
+import { User } from '@md-shared/types/entities'
+import { RootStore } from '@md-store/modules'
+import { ThunkDispatch } from '@md-store/helpers'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 // constants
-import { PrimaryParamList, ROUTES } from '../../../navigation/constants'
+import { PrimaryParamList, ROUTES } from '@md-navigation/constants'
 
 type StoreSelector = {
   users: RootStore['api']['user']['getUsers']['data']

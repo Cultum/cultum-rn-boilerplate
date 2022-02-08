@@ -1,5 +1,5 @@
 import { AxiosInstance } from 'axios'
-import { User } from '../../../types/entities'
+import { User } from '@md-shared/types/entities'
 
 export interface GetUserParams {
   id: string
@@ -15,8 +15,10 @@ export interface GetUsersParams {
 
 export interface GetUsersResponse {
   page: number
+  // eslint-disable-next-line camelcase
   per_page: number
   total: number
+  // eslint-disable-next-line camelcase
   total_pages: number
   data: User[]
 }

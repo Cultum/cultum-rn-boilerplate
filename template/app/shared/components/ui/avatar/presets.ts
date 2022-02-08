@@ -1,4 +1,4 @@
-import { theme } from '../../../theme'
+import { theme } from '@md-shared/theme'
 
 export const avatarPresets = {
   extraLarge: {

@@ -10,7 +10,7 @@ import { RootNavigator } from '@md-navigation'
 // store
 import createStore from './store'
 // themes
-import { theme } from "./shared/theme"
+import { theme } from '@md-shared/theme'
 
 const store = createStore()
 

@@ -1,7 +1,7 @@
 // libs
 import { Dimensions } from 'react-native'
 // theme
-import { spacing } from '../../../theme'
+import { spacing } from '@md-shared/theme'
 
 const { width } = Dimensions.get('window')
 
